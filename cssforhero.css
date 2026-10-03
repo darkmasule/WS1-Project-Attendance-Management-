@@ -15,7 +15,7 @@
     flex-direction: column;
     background-color: #F7F1E8;
     z-index: 1;
-    box-shadow: 3px 0px 12px rgba(0, 0, 0, 0.15);
+    box-shadow: 3px 0px 12px rgba(0, 0, 0, 0.50);
 }
 
 .headline > * {
@@ -76,5 +76,9 @@
 }
 
 .showcase {
+    display: flex;
     background-color: #FFF9F0;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
 }
