@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+.hero {
+    display: flex;
+    height: 554px;
+    width: 100%;
+}
+
+.hero section {
+    flex: 1;
+}
+
+.headline {
+    display: flex;
+    flex-direction: column;
+    background-color: #F7F1E8;
+    z-index: 1;
+    box-shadow: 3px 0px 12px rgba(0, 0, 0, 0.15);
+}
+
+.headline > * {
+    flex: 1;
+}
+
+.description {
+    gap: 0;
+    padding: 40px;
+}
+
+.description > * {
+    position: relative;
+    margin: 0;
+    top: 50px;
+}
+
+.description h3 {
+    font-size: 50px;
+    color: #24150E;
+}
+
+.description p {
+    font-size: 23px;
+    color: #8A7565;
+}
+
+.herocta {
+    padding: 40px;
+}
+
+.herocta p {
+    color: #6F4E37;
+    font-size: 17.5px;
+    margin-bottom: 5px;
+}
+
+#register {
+    background-color: #6F4E37;
+    color: white;
+    border: none;
+    border-radius: 4px 4px 0 4px;
+    padding: 10px 25px 10px 25px;
+    width: 99px;
+    height: 35px;
+    box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.15);
+}
+
+#login {
+    background-color: #3B2416;
+    color: white;
+    border: none;
+    border-radius: 0 4px 4px 4px;
+    padding: 10px 25px 10px 25px;
+    width: 99px;
+    height: 35px;
+    box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.25);
+}
+
+.showcase {
+    background-color: #FFF9F0;
+}
