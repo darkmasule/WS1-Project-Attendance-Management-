@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,7 +12,10 @@
     <link rel="stylesheet" href="cssforfeatures.css">
     <link rel="stylesheet" href="cssforhowitworks.css">
     <link rel="stylesheet" href="cssforfooter.css">
+    <link rel="stylesheet" href="loginform.css">
+    <link rel="stylesheet" href="registerform.css">
 </head>
+
 <body>
     <header>
         <nav>
@@ -35,7 +39,8 @@
             <section class="headline">
                 <div class="description">
                     <h3>Quick Scans. <br />Accurate Records.</h3>
-                    <p>Streamline attendance tracking with fast QR code scanning and accurate, organized records for every class.</p>
+                    <p>Streamline attendance tracking with fast QR code scanning and accurate, organized records for
+                        every class.</p>
                 </div>
 
                 <div class="herocta">
@@ -47,6 +52,44 @@
                 </div>
             </section>
 
+            <div class="registerform">
+
+            </div>
+
+            <div class="loginform">
+                <section class="firsthalf">
+                    <h2 id="loginheader">Login Page</h2>
+
+                    <div class="email">
+                        <label for="emailinput" class="emailinput">Student ID or Email:</label>
+                        <input type="text" id="emailinput" class="emailinput" required />
+                    </div>
+
+                    <div class="password">
+                        <label for="passinput" class="passwpassinputord">Password:</label>
+                        <input type="password" id="passinput" class="passinput" required />
+                    </div>
+                    
+                    <div class="staylogin">
+                        <input type="checkbox" id="staylogin">
+                        <label for="staylogin">Stay logged in?</label>
+                    </div>
+
+                    <button id="loginbutton">Login</button>
+                </section>
+
+                <section class="secondhalf">
+                    <h3>Welcome Back! <br> Let's get started.</h3>
+                    <p>Login your account to start monitoring attendance</p>
+                    
+                    <div class="register">
+                        <p>Don't have an account?</p>
+                        <button id="register">Register</button>
+                    </div>
+                    
+                </section>
+            </div>
+
             <section class="showcase">
                 <img src="../img_use/Property 1=Default.png" alt="icon" />
             </section>
@@ -57,30 +100,37 @@
             <section class="fbox">
                 <div class="box1">
                     <section>
-                        <img src="../img_use/icon.png" alt="icon" loading="lazy"/>
+                        <img src="../img_use/icon.png" alt="icon" loading="lazy" />
                         <h5>Record Attedance</h5>
                     </section>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe nobis mollitia aliquam, quis eius quas harum consequuntur pariatur voluptatibus excepturi </p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe nobis mollitia aliquam, quis eius
+                        quas harum consequuntur pariatur voluptatibus excepturi </p>
                 </div>
                 <div class="box2">
                     <section>
-                        <img src="../img_use/icon_container.png" alt="icon" loading="lazy"/>
+                        <img src="../img_use/icon_container.png" alt="icon" loading="lazy" />
                         <h5>Scan QR to Check In</h5>
                     </section>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe nobis mollitia aliquam, quis eius quas harum consequuntur pariatur voluptatibus excepturi </p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe nobis mollitia aliquam, quis eius
+                        quas harum consequuntur pariatur voluptatibus excepturi </p>
                 </div>
                 <div class="box3">
                     <section>
-                        <img src="../img_use/icon_container(1).png" alt="icon" loading="lazy"/>
+                        <img src="../img_use/icon_container(1).png" alt="icon" loading="lazy" />
                         <h5>Check Record History</h5>
                     </section>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe nobis mollitia aliquam, quis eius quas harum consequuntur pariatur voluptatibus excepturi </p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe nobis mollitia aliquam, quis eius
+                        quas harum consequuntur pariatur voluptatibus excepturi </p>
                 </div>
             </section>
 
             <section class="fdescription">
                 <h4>Everything You Need for Easier Attendance</h4>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea quas inventore impedit veritatis culpa quis commodi voluptates reprehenderit minima cupiditate, laudantium tempora adipisci enim, molestiae saepe modi dolorum laborum. Ut! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea quas inventore impedit veritatis culpa quis commodi voluptates reprehenderit minima cupiditate, laudantium tempora adipisci enim, molestiae saepe modi dolorum laborum. Ut!</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea quas inventore impedit veritatis culpa
+                    quis commodi voluptates reprehenderit minima cupiditate, laudantium tempora adipisci enim, molestiae
+                    saepe modi dolorum laborum. Ut! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea quas
+                    inventore impedit veritatis culpa quis commodi voluptates reprehenderit minima cupiditate,
+                    laudantium tempora adipisci enim, molestiae saepe modi dolorum laborum. Ut!</p>
             </section>
         </div>
 
@@ -93,18 +143,32 @@
 
             <section>
                 <h4>How it works?</h4>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit dolor accusamus et fuga nobis, ea mollitia, odit iure tempora temporibus aliquam culpa corrupti suscipit harum consectetur ab dolores, natus consequuntur? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit nemo odit facilis excepturi repudiandae? Ullam repellendus voluptatem, fugit blanditiis reprehenderit eveniet expedita quas possimus, porro consequuntur dolorem corporis id similique.</p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit dolor accusamus et fuga nobis, ea
+                    mollitia, odit iure tempora temporibus aliquam culpa corrupti suscipit harum consectetur ab dolores,
+                    natus consequuntur? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit nemo odit
+                    facilis excepturi repudiandae? Ullam repellendus voluptatem, fugit blanditiis reprehenderit eveniet
+                    expedita quas possimus, porro consequuntur dolorem corporis id similique.</p>
                 <br />
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit dolor accusamus et fuga nobis, ea mollitia, odit iure tempora temporibus aliquam culpa corrupti suscipit harum consectetur ab dolores, natus consequuntur? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit nemo odit facilis excepturi repudiandae? Ullam repellendus voluptatem, fugit blanditiis reprehenderit eveniet expedita quas possimus, porro consequuntur dolorem corporis id similique. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit dolor accusamus et fuga nobis, ea mollitia, odit iure tempora temporibus aliquam culpa corrupti suscipit harum consectetur ab dolores, natus consequuntur? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit nemo odit facilis excepturi repudiandae? Ullam repellendus voluptatem, fugit blanditiis reprehenderit eveniet expedita quas possimus, porro consequuntur dolorem corporis id similique.</p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit dolor accusamus et fuga nobis, ea
+                    mollitia, odit iure tempora temporibus aliquam culpa corrupti suscipit harum consectetur ab dolores,
+                    natus consequuntur? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit nemo odit
+                    facilis excepturi repudiandae? Ullam repellendus voluptatem, fugit blanditiis reprehenderit eveniet
+                    expedita quas possimus, porro consequuntur dolorem corporis id similique. Lorem ipsum dolor sit amet
+                    consectetur, adipisicing elit. Impedit dolor accusamus et fuga nobis, ea mollitia, odit iure tempora
+                    temporibus aliquam culpa corrupti suscipit harum consectetur ab dolores, natus consequuntur? Lorem
+                    ipsum dolor sit amet consectetur, adipisicing elit. Fugit nemo odit facilis excepturi repudiandae?
+                    Ullam repellendus voluptatem, fugit blanditiis reprehenderit eveniet expedita quas possimus, porro
+                    consequuntur dolorem corporis id similique.</p>
             </section>
         </div>
     </main>
 
     <footer>
         <div>
-            <p>A simple attendance monitoring system for students and teachers, developed as a school project. Thanks to everyone who helped make this project possible:</p>
+            <p>A simple attendance monitoring system for students and teachers, developed as a school project. Thanks to
+                everyone who helped make this project possible:</p>
         </div>
-            
+
         <div>
             <ul>
                 <li>Aldana, Jessie Leane</li>
@@ -115,4 +179,5 @@
         </div>
     </footer>
 </body>
+
 </html>
