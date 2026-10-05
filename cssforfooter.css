@@ -10,8 +10,8 @@ footer div p {
     font-size: 23px;
     margin: 0;
     height: 170px;
-    color: #8A7565;
-    background-color: #FFF9F0;
+    color: #6B7C8F;
+    background-color: #FFFF;
     padding: 0 18px 0;
     display: flex;
     justify-content: center;
@@ -20,7 +20,7 @@ footer div p {
 
 footer div ul {
     display: flex;
-    background-color: #EADBC8;
+    background-color: #DEE8F3;
     flex-direction: column;
     list-style-type: none;
     height: 170px;

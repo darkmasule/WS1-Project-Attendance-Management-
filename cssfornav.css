@@ -10,7 +10,7 @@ body {
 nav {
     display: flex;
     flex-direction: row;
-    background-color: #3B2416;
+    background-color: #285A91;
     height: 72px;
 }
 
@@ -27,10 +27,10 @@ nav p {
 
 #logo {
     position: absolute;
-    height: 46px;
-    width: 76px;
+    height: 40px;
+    width: auto;
     left: 50px;
-    top: 5px;
+    top: 15px;
 }
 
 nav .ctadiv p{
