@@ -19,7 +19,7 @@
 }
 
 .firsthalf {
-    background-color: #F4F7FC;
+    background-color: #DDE6F1;
     gap: 10px;
     border-radius: 10px 0 0 10px;
 
@@ -88,7 +88,7 @@
 }
 
 .secondhalf {
-    background-color: #DDE6F1;
+    background-color: #F4F7FC;
     border-radius: 0 10px 10px 0;
 
     h3 {
@@ -112,6 +112,7 @@
         margin-bottom: 8px;
         text-align: center;
         font-size: 13px;
+        gap: 5px;
     }
 
     #register {
