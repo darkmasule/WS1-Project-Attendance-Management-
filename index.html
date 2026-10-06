@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="cssforfooter.css">
     <link rel="stylesheet" href="loginform.css">
     <link rel="stylesheet" href="registerform.css">
+    <link rel="stylesheet" href="registrationform.css">
 </head>
 
 <body>
@@ -53,7 +54,68 @@
             </section>
 
             <div class="registerform">
+                <section class="firsthalf">
+                    <h2>Registration Form</h2>
+                    <div class="name">
+                        <div>
+                            <label for="lname">Last Name:</label>
+                            <input type="text" id="lname" required>
+                        </div>
+                        
+                        <div>
+                            <label for="fname">Fisrt Name:</label>
+                            <input type="text" id="fname" required>
+                        </div>
+                    </div>
 
+                    <div class="professor">
+                        <input type="checkbox" id="professor">
+                        <label for="professor">Are you registering as a professor?</label>
+                    </div>
+                    
+                    <label for="idno">ID no:</label>
+                    <input type="text" id="idno" required>
+
+                    <label for="program">Program:</label>
+                    <select name="Program" id="program">
+                        <option value="" hidden></option>
+                        <option value="CS">Computer Science</option>
+                        <option value="IT">Information and Technology</option>
+                    </select>
+
+                    <label for="yearlevel">Year level:</label>
+                    <select name="yearlevel" id="yearlevel">
+                        <option value="" hidden></option>
+                        <option value="1styear">1st year</option>
+                        <option value="2ndyear">2nd year</option>
+                        <option value="3rdyear">3rd year</option>
+                        <option value="4thyear">4th year</option>
+                    </select>
+
+                    <label for="section" class="section">Section:</label>
+                    <select name="section" id="section">
+                        <option value="" hidden></option>
+                        <option value="N001BC">LFCAN001BC</option>
+                    </select>
+
+                    <label for="emailr">Email:</label>
+                    <input type="email" id="emailr" required>
+                    
+                    <label for="passwordr" class="passwordr">Password:</label>
+                    <input type="password" id="passwordr" class="passwordr" required>
+
+                    <button id="signup">Sign Up</button>
+                </section>
+
+                <section class="secondhalf">
+                    <h3>Welcome! <br> Nice to meet you.</h3>
+                    <p>Create your account to get started with our attendance monitoring system</p>
+                    
+                    <div class="login">
+                        <p>Already have an account?</p>
+                        <button id="login">Log in</button>
+                    </div>
+                </section>
             </div>
 
             <div class="loginform">
@@ -61,7 +123,7 @@
                     <h2 id="loginheader">Login Page</h2>
 
                     <div class="email">
-                        <label for="emailinput" class="emailinput">Student ID or Email:</label>
+                        <label for="emailinput" class="emailinput">ID no. or Email:</label>
                         <input type="text" id="emailinput" class="emailinput" required />
                     </div>
 
@@ -86,7 +148,6 @@
                         <p>Don't have an account?</p>
                         <button id="register">Register</button>
                     </div>
-                    
                 </section>
             </div>
 
