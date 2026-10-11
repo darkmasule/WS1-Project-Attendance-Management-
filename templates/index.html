@@ -64,9 +64,103 @@
 
           <div class="hero_cta_container">
             <p>Get started with your account:</p>
-            <div class="herobutton">
-              <button id="register">Register</button>
-              <button id="login">Login</button>
+            <div class="cta_container">
+              <button id="register_cta">Register</button>
+              <button id="login_cta">Log In</button>
+
+              <dialog id="registration_form">
+                <div class="form_container">
+                  <p>Registration Form</p>
+                  <div class="form">
+                    <form id="registration_data" action="/submit" method="POST">
+                      <div class="form_group_container">
+                        <div class="form_group">
+                          <label for="first_name">First name:</label>
+                          <input
+                            type="text"
+                            id="first_name"
+                            name="first_name"
+                            required
+                          />
+                        </div>
+
+                        <div class="form_group">
+                          <label for="last_name">Last name:</label>
+                          <input
+                            type="text"
+                            id="last_name"
+                            name="last_name"
+                            required
+                          />
+                        </div>
+                      </div>
+
+                      <div class="form_single">
+                        <label for="id_number">ID no:</label>
+                        <input
+                          type="text"
+                          id="id_number"
+                          name="id_number"
+                          required
+                        />
+                      </div>
+
+                      <div class="form_single">
+                        <label for="program">Program:</label>
+                        <select name="program" id="program" required>
+                          <option value="" disabled selected></option>
+                          <option value="subject1">SUB1: Subject 1</option>
+                          <option value="subject2">SUB2: Subject 2</option>
+                          <option value="subject3">SUB3: Subject 3</option>
+                        </select>
+                      </div>
+
+                      <div class="form_group_container">
+                        <div class="form_group">
+                          <label for="year_level">Year Level:</label>
+                          <select name="year_level" id="year_level" required>
+                            <option value="" disabled selected></option>
+                            <option value="year_one">1st year</option>
+                            <option value="year_two">2nd year</option>
+                            <option value="irregular">Irregular</option>
+                          </select>
+                        </div>
+
+                        <div class="form_group">
+                          <label for="section">Section:</label>
+                          <select name="section" id="section" required>
+                            <option value="" disabled selected></option>
+                            <option value="section1">Section 1</option>
+                            <option value="section2">Section 2</option>
+                            <option value="section3">Section 3</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <div class="form_single">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required />
+                      </div>
+
+                      <div class="form_single">
+                        <label for="password">Password:</label>
+                        <input
+                          type="password"
+                          id="password"
+                          name="password"
+                          required
+                        />
+                      </div>
+                    </form>
+                  </div>
+
+                  <div class="submission_cta">
+                    <button type="submit" form="registration_data">
+                      Sign In
+                    </button>
+                  </div>
+                </div>
+              </dialog>
             </div>
           </div>
         </div>
@@ -185,9 +279,11 @@
           </section>
         </div> -->
 
-        <section class="showcase">
-          <img src="../img_use/Property 1=Default.png" alt="icon" />
-        </section>
+        <div class="showcase">
+          <div class="cards_container">
+            <!-- <img src="../img_use/Property 1=Default.png" alt="icon" /> -->
+          </div>
+        </div>
       </div>
     </header>
     <main>
@@ -314,5 +410,6 @@
         </ul>
       </div>
     </footer>
+    <script src="../static/scripts/landing_page.js"></script>
   </body>
 </html>
