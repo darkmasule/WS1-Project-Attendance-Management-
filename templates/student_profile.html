@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block header_title }
+{% block header_title %}Account Profile{% endblock %}
+
+{% block content%}
+<div class="profilewrapper">
+    <div class="profilecard">
+        <h3>Student Information</h3>
+         <div class="userinfobox">
+            <img src-="{{ url_for('ststic', filename='asset/icons/bin/profile_icon.png') }}" alt="profile icon" class="profileicon">
+            <link rel="stylesheet" href="{{ url_for('static', filename='styles/profile.css') }}">
+            <div>
+                <h2>Juana Dela Cruz</h2>
+                <p>BS Computer Science</p>
+                <p class="idtext">ID no. CA202612345</p>
+            </div>
+        </div>
+
+        <div class="infodetails">
+            </div>
+                <h4>Email</h4>
+                <p>juana.dela.cruz@student.university.edu</p>
+            </div>
+        </div>
+
+        <div class+"profileactions">
+            <button class="editbtn">Edit Profile</button>
+        </div>"
+    </div>
+
+ <div class="hardwarecard">
+    <h3>Registered hardware</h3>
+    <div class="devicebox">
+        <div class="devicedetails">
+            <h4>Bound Device</h4>
+            <p>iPhone 20 Pro Max</p>
+            <span class="badge active">Active</span>
+        </div>
+        <p class="subnote">Linked for secure QR code attendance validation.</p>
+        <div class="deviceids">
+            <p><strong>Device ID:</strong> 5DA1-92FF-A11D-23C9</p>
+            <P><strong>Date Registered:</strong> August 12, 2026</P>
+        </div>
+    </div>    
+ </div>
+</div>   
+{% endblock %}
