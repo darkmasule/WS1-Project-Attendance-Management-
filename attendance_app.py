@@ -7,7 +7,7 @@ from routes.users import users
 #may ilalagay pako dito
 
 
-
+#session ID
 
 
 def record_attendance():
@@ -15,3 +15,7 @@ def record_attendance():
 
     student_id = data.get("student_id", "").strip()
     name = data.get("name", "").strip()
+
+
+
+#statement operation
