@@ -7,17 +7,11 @@
     <link rel="stylesheet" href="..\static\styles\global.css" />
     <link rel="stylesheet" href="..\static\styles\landing_page.css" />
 
-    <title>Landing Page</title>
-
-    <!-- <link rel="stylesheet" href="..\static\styles\nav_section.css" />
-    <link rel="stylesheet" href="..\static\styles\hero_section.css" />
-    <link rel="stylesheet" href="..\static\styles\features_1.css" />
-    <link rel="stylesheet" href="..\static\styles\features_2.css" />
-    <link rel="stylesheet" href="..\static\styles\footer_section.css" />
-    <link rel="stylesheet" href="..\static\styles\login_form.css" />
-    <link rel="stylesheet" href="..\static\styles\registration_form.css" /> -->
+    <title>WS1 Finals Project</title>
   </head>
   <body>
+    <!--! Header & Nav Section -->
+
     <header>
       <nav>
         <div class="logo_container">
@@ -31,10 +25,6 @@
           <a href="#home">Home</a>
           <a href="#features">How It Works?</a>
           <a href="#credits">Credits</a>
-
-          <!-- <p id="features">Features</p>
-          <p id="howitworks">How it works?</p>
-          <p id="aboutus">About us</p> -->
         </div>
 
         <div class="side_cta_container">
@@ -49,8 +39,12 @@
         </div>
       </nav>
 
+      <!--* Hero Container -->
+
       <div class="hero_container">
         <div class="headline">
+          <!--* Grid 1 - Header Description -->
+
           <div class="description">
             <h1>
               Quick Scans.<br />
@@ -173,251 +167,143 @@
           </div>
         </div>
 
-        <!-- <div class="registerform">
-          <section class="firsthalf">
-            <h2>Registration Form</h2>
-            <div class="name">
-              <div>
-                <label for="lname">Last Name:</label>
-                <input type="text" id="lname" required />
-              </div>
-
-              <div>
-                <label for="fname">Fisrt Name:</label>
-                <input type="text" id="fname" required />
-              </div>
-            </div>
-
-            <div class="professor">
-              <input type="checkbox" id="professor" />
-              <label for="professor">Are you registering as a professor?</label>
-            </div>
-
-            <label for="idno">ID no:</label>
-            <input type="text" id="idno" required />
-
-            <label for="program">Program:</label>
-            <select name="Program" id="program">
-              <option value="" hidden></option>
-              <option value="CS">Computer Science</option>
-              <option value="IT">Information and Technology</option>
-            </select>
-
-            <label for="yearlevel">Year level:</label>
-            <select name="yearlevel" id="yearlevel">
-              <option value="" hidden></option>
-              <option value="1styear">1st year</option>
-              <option value="2ndyear">2nd year</option>
-              <option value="3rdyear">3rd year</option>
-              <option value="4thyear">4th year</option>
-            </select>
-
-            <label for="section" class="section">Section:</label>
-            <select name="section" id="section">
-              <option value="" hidden></option>
-              <option value="N001BC">LFCAN001BC</option>
-            </select>
-
-            <label for="emailr">Email:</label>
-            <input type="email" id="emailr" required />
-
-            <label for="passwordr" class="passwordr">Password:</label>
-            <input type="password" id="passwordr" class="passwordr" required />
-
-            <button id="signup">Sign Up</button>
-          </section>
-
-          <section class="secondhalf">
-            <h3>
-              Welcome! <br />
-              Nice to meet you.
-            </h3>
-            <p>
-              Create your account to get started with our attendance monitoring
-              system
-            </p>
-
-            <div class="login">
-              <p>Already have an account?</p>
-              <button id="login">Log in</button>
-            </div>
-          </section>
-        </div>
-
-        <div class="loginform">
-          <section class="firsthalf">
-            <h2 id="loginheader">Login Page</h2>
-
-            <div class="email">
-              <label for="emailinput" class="emailinput"
-                >ID no. or Email:</label
-              >
-              <input type="text" id="emailinput" class="emailinput" required />
-            </div>
-
-            <div class="password">
-              <label for="passinput" class="passwpassinputord">Password:</label>
-              <input
-                type="password"
-                id="passinput"
-                class="passinput"
-                required
-              />
-            </div>
-
-            <div class="staylogin">
-              <input type="checkbox" id="staylogin" />
-              <label for="staylogin">Stay logged in?</label>
-            </div>
-
-            <button id="loginbutton">Login</button>
-          </section>
-
-          <section class="secondhalf">
-            <h3>
-              Welcome Back! <br />
-              Let's get started.
-            </h3>
-            <p>Login your account to start monitoring attendance</p>
-
-            <div class="register">
-              <p>Don't have an account?</p>
-              <button id="register">Register</button>
-            </div>
-          </section>
-        </div> -->
+        <!--* Grid 2 - Cards Showcase -->
 
         <div class="showcase">
           <div class="cards_container">
-            <!-- <img src="../img_use/Property 1=Default.png" alt="icon" /> -->
+            <!--TODO <img src="../img_use/Property 1=Default.png" alt="icon" /> -->
           </div>
         </div>
       </div>
     </header>
+
+    <!--! Main Section -->
+
     <main>
+      <!--* Features Showcase -->
+
       <div class="features">
-        <section class="fbox">
-          <div class="box1">
-            <section>
-              <img src="../img_use/icon.png" alt="icon" loading="lazy" />
-              <h5>Record Attedance</h5>
-            </section>
+        <!--* Cards Container -->
+
+        <section class="features_cards">
+          <div class="card_container card_1">
+            <div class="icon_container">
+              <div class="icon">
+                <img
+                  src="..\static\assets\icons\attendance_icon_showcase.svg"
+                  alt="attendance_icon"
+                />
+              </div>
+              <h3>Record Attedance</h3>
+            </div>
+
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
-              nobis mollitia aliquam, quis eius quas harum consequuntur pariatur
-              voluptatibus excepturi
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
           </div>
-          <div class="box2">
-            <section>
-              <img
-                src="../img_use/icon_container.png"
-                alt="icon"
-                loading="lazy"
-              />
-              <h5>Scan QR to Check In</h5>
-            </section>
+
+          <div class="card_container card_2">
+            <div class="icon_container">
+              <div class="icon">
+                <img
+                  src="..\static\assets\icons\qrcode_icon_showcase.svg"
+                  alt="attendance_icon"
+                />
+              </div>
+              <h3>Check-in by Scan</h3>
+            </div>
+
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
-              nobis mollitia aliquam, quis eius quas harum consequuntur pariatur
-              voluptatibus excepturi
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
           </div>
-          <div class="box3">
-            <section>
-              <img
-                src="../img_use/icon_container(1).png"
-                alt="icon"
-                loading="lazy"
-              />
-              <h5>Check Record History</h5>
-            </section>
+
+          <div class="card_container card_3">
+            <div class="icon_container">
+              <div class="icon">
+                <img
+                  src="..\static\assets\icons\history_icon_showcase.svg"
+                  alt="attendance_icon"
+                />
+              </div>
+              <h3>History of Records</h3>
+            </div>
+
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
-              nobis mollitia aliquam, quis eius quas harum consequuntur pariatur
-              voluptatibus excepturi
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
           </div>
         </section>
 
-        <section class="fdescription">
-          <h4>Everything You Need for Easier Attendance</h4>
+        <!--* Description -->
+
+        <section class="feature_description">
+          <h2>Everything You Need for Easier Attendance</h2>
           <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea quas
-            inventore impedit veritatis culpa quis commodi voluptates
-            reprehenderit minima cupiditate, laudantium tempora adipisci enim,
-            molestiae saepe modi dolorum laborum. Ut! Lorem ipsum, dolor sit
-            amet consectetur adipisicing elit. Ea quas inventore impedit
-            veritatis culpa quis commodi voluptates reprehenderit minima
-            cupiditate, laudantium tempora adipisci enim, molestiae saepe modi
-            dolorum laborum. Ut!
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum.
           </p>
         </section>
       </div>
 
-      <div class="howitworks">
-        <section>
-          <div>
-            <img
-              src="../img_use/Property 1=Default.png"
-              alt="carousel"
-              loading="lazy"
-            />
-          </div>
-        </section>
+      <!--* Description 2 -->
 
-        <section>
-          <h4>How it works?</h4>
+      <div class="hiw_description_container">
+        <section class="hiw_card_container"></section>
+
+        <section class="hiw_description">
+          <h2>How it works?</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit
-            dolor accusamus et fuga nobis, ea mollitia, odit iure tempora
-            temporibus aliquam culpa corrupti suscipit harum consectetur ab
-            dolores, natus consequuntur? Lorem ipsum dolor sit amet consectetur,
-            adipisicing elit. Fugit nemo odit facilis excepturi repudiandae?
-            Ullam repellendus voluptatem, fugit blanditiis reprehenderit eveniet
-            expedita quas possimus, porro consequuntur dolorem corporis id
-            similique.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum.
           </p>
-          <br />
           <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit
-            dolor accusamus et fuga nobis, ea mollitia, odit iure tempora
-            temporibus aliquam culpa corrupti suscipit harum consectetur ab
-            dolores, natus consequuntur? Lorem ipsum dolor sit amet consectetur,
-            adipisicing elit. Fugit nemo odit facilis excepturi repudiandae?
-            Ullam repellendus voluptatem, fugit blanditiis reprehenderit eveniet
-            expedita quas possimus, porro consequuntur dolorem corporis id
-            similique. Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-            Impedit dolor accusamus et fuga nobis, ea mollitia, odit iure
-            tempora temporibus aliquam culpa corrupti suscipit harum consectetur
-            ab dolores, natus consequuntur? Lorem ipsum dolor sit amet
-            consectetur, adipisicing elit. Fugit nemo odit facilis excepturi
-            repudiandae? Ullam repellendus voluptatem, fugit blanditiis
-            reprehenderit eveniet expedita quas possimus, porro consequuntur
-            dolorem corporis id similique.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum.
           </p>
         </section>
       </div>
     </main>
 
+    <!--! Footer Section -->
+
     <footer>
-      <div>
+      <section class="credits_description">
         <p>
           A simple attendance monitoring system for students and teachers,
           developed as a school project. Thanks to everyone who helped make this
           project possible:
         </p>
-      </div>
+      </section>
 
-      <div>
+      <section class="members_list">
         <ul>
           <li>Aldana, Jessie Leane</li>
           <li>Cañete, Von Eiron</li>
           <li>Felipe, Noriel Jr.</li>
           <li>Oledan, Samuel Dave</li>
         </ul>
-      </div>
+      </section>
     </footer>
+
     <script src="../static/scripts/landing_page.js"></script>
   </body>
 </html>
