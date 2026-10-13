@@ -10,7 +10,9 @@ db = client[""]
 attendance_records.create_index(
     [("student_id", 1), ("session_id", 1)],
     unique=True
+query = {"student_id": student_id, "session_id": SESSION_ID}
 )
+query = {"student_id": student_id, "session_id": SESSION_ID}
 
 attendance_queue = deque()
 SESSION_ID = ""
