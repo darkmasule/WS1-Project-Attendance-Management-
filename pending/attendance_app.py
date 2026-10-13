@@ -11,7 +11,7 @@ attendance_records.create_index(
     [("student_id", 1), ("session_id", 1)],
     unique=True
 )
-
+#need pa to i complete
 
 #session ID
 
@@ -29,4 +29,4 @@ while attendance_queue:
     student = attendance_queue.popleft()
 
 try:
-    
+    #di pa tapos need pa ng return except return blocks
