@@ -5,7 +5,7 @@ from collections import deque
 from pymongo import MongoClient
 from pymongo.errors import DuplicateKeyError
 
-client = MongoClient("")
+client = MongoClient("mongodb+srv://felipejrnoriel_db_user:aqwkTLilxErXraRO@fp-db.8nhcswv.mongodb.net/")
 db = client[""]
 attendance_records.create_index(
     [("student_id", 1), ("session_id", 1)],
