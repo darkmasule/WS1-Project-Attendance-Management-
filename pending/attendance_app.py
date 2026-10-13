@@ -25,3 +25,8 @@ def record_attendance():
 
 
 #statement operation
+while attendance_queue:
+    student = attendance_queue.popleft()
+
+try:
+    
