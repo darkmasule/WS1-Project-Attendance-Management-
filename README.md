@@ -44,6 +44,8 @@
 </ul>
 <br />
 
+
+
 **STEP 5**
 <p>Configure MongoDB connection:</p>
 <p>Run this command:</p>
@@ -53,6 +55,20 @@
 <br />
 
 **STEP 6**
+<p>Configure Flask secret key:</p>
+<p>Run this command:</p>
+<ul>
+  <li>python -c "import secrets; print(secrets.token_hex(32))"</li>
+</ul>
+
+**SAVE THE GENERATED KEY ON A TEXT FILE**
+<p>Copy the generated key and set the environment variable:</p>
+<ul>
+  <li>$env:SECRET_KEY = "PASTE KEY HERE"</li>
+</ul>
+<br />
+
+**STEP 7**
 <p>Run the application:</p>
 <p>Run this command:</p>
 <ul>
@@ -65,7 +81,7 @@
 </ul>
 <br />
 
-**STEP 7**
+**STEP 8**
 <p>To stop the application:</p>
 <ul>
   <li>CTRL + C</li>
