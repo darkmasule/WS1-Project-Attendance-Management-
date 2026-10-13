@@ -126,7 +126,9 @@ header {
             border-radius: 6px 6px 0 6px;
           }
 
-          #login_cta {
+          #login_cta,
+          #form_register_cta,
+          #form_login_cta {
             background: var(--primary-color);
             border-radius: 0 6px 6px 6px;
           }
@@ -139,7 +141,10 @@ header {
         color: var(--muted-text-color);
       }
 
-      #registration_form {
+      /** Registration Form */
+
+      #registration_form,
+      #login_form {
         grid-template-columns: 1fr 1fr;
 
         height: 760px;
@@ -155,8 +160,6 @@ header {
         }
 
         .form_container {
-          grid-column: 1;
-
           display: grid;
           grid-template-rows: auto 1fr auto;
           gap: 32px;
@@ -210,7 +213,8 @@ header {
             }
           }
 
-          .submission_cta {
+          .submission_cta,
+          .submit_login_cta {
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -231,21 +235,44 @@ header {
         }
 
         .side_header {
+          display: grid;
+          grid-template-rows: 1fr auto auto;
           background: var(--background-color);
           padding: 64px 32px;
+          gap: 12px;
 
-          h3 {
-            font-family: var(--header-font);
-            font-size: 2.6rem;
+          .side_header_description {
+            gap: 16px;
+            h3 {
+              font-family: var(--header-font);
+              font-size: 2.6rem;
+              font-weight: 600;
+              line-height: 1.1;
+            }
           }
 
-          p {
+          #no_account {
+            text-align: center;
+          }
+
+          #no_account,
+          .side_header_description {
             font-family: var(--alt-font);
             font-size: 1.4rem;
             word-spacing: -0.5%;
           }
+
+          .login_form_cta,
+          .registration_form_cta {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: end;
+          }
         }
       }
+
+      /** Log In Form */
     }
 
     /** Grid 2 */
