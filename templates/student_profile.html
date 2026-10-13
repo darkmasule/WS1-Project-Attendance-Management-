@@ -1,14 +1,17 @@
 {% extends "base.html" %}
 
-{% block header_title }
-{% block header_title %}Account Profile{% endblock %}
+{% block title %}Account Profile{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='styles/profile.css') }}">
+{% endblock %}
 
 {% block content%}
 <div class="profilewrapper">
     <div class="profilecard">
         <h3>Student Information</h3>
          <div class="userinfobox">
-            <img src-="{{ url_for('ststic', filename='asset/icons/bin/profile_icon.png') }}" alt="profile icon" class="profileicon">
+            <img src="{{ url_for('static', filename='assets/icons/bin/profile_icon.png') }}" alt="profile icon" class="profileicon">
             <link rel="stylesheet" href="{{ url_for('static', filename='styles/profile.css') }}">
             <div>
                 <h2>Juana Dela Cruz</h2>
@@ -24,9 +27,9 @@
             </div>
         </div>
 
-        <div class+"profileactions">
+        <div class="profileactions">
             <button class="editbtn">Edit Profile</button>
-        </div>"
+        </div>
     </div>
 
  <div class="hardwarecard">
@@ -45,4 +48,4 @@
     </div>    
  </div>
 </div>   
-{% endblock %}
+{% endblock %} 

@@ -36,6 +36,6 @@ def submit():
     return """ <h1>Submitted Successfully!</h1>
     <a href="/">Back to Form</a> """
 
-@users.route(""/student/profile")
-             def student_profile():
-             return render_template("student_profile.html")
+@users.route("/student/profile")
+def student_profile():
+    return render_template("student_profile.html")
