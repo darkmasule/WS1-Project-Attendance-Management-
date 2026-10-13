@@ -11,6 +11,9 @@ attendance_records.create_index(
     [("student_id", 1), ("session_id", 1)],
     unique=True
 )
+
+attendance_queue = deque()
+SESSION_ID = ""
 #need pa to i complete
 
 #session ID
