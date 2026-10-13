@@ -3,7 +3,8 @@ from flask import Flask
 from routes.users import users
 
 
-
+client = MongoClient("")
+db = client[""]
 #may ilalagay pako dito
 
 
