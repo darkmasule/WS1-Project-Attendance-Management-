@@ -16,17 +16,21 @@ query = {"student_id": student_id, "session_id": SESSION_ID}
 
 attendance_queue = deque()
 SESSION_ID = ""
-#need pa to i complete
 
 #session ID
 
-
+@app.route("/api/attendance", methods=["POST"])
 def record_attendance():
     data = request.get_json(silent=True) or {}
 
     student_id = data.get("student_id", "").strip()
     name = data.get("name", "").strip()
 
+ if not student_id or not name:
+        return jsonify({
+            "success": False,
+            "message": "Provid Student ID or name"
+        }), 400
 
 
 #statement operation
