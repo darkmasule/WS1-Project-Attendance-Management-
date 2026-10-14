@@ -10,9 +10,11 @@
     <title>WS1 Finals Project</title>
   </head>
   <body>
-    <!--! Header & Nav Section -->
+    <!--! Header Section -->
 
     <header>
+      <!--! Navigation Section -->
+
       <nav>
         <div class="logo_container">
           <img
@@ -28,7 +30,7 @@
         </div>
 
         <div class="side_cta_container">
-          <a href="#home">Welcome, Lei</a>
+          <a href="#home">Welcome, User</a>
 
           <div class="profile_container">
             <img
@@ -58,95 +60,97 @@
 
           <div class="hero_cta_container">
             <p>Get started with your account:</p>
+
             <div class="cta_container">
               <button id="register_cta">Register</button>
               <button id="login_cta">Log In</button>
 
+              <!--* Registration Form -->
+
               <dialog id="registration_form">
                 <div class="form_container">
                   <p>Registration Form</p>
-                  <div class="form">
-                    <form id="registration_data" action="/submit" method="POST">
-                      <div class="form_group_container">
-                        <div class="form_group">
-                          <label for="first_name">First name:</label>
-                          <input
-                            type="text"
-                            id="first_name"
-                            name="first_name"
-                            required
-                          />
-                        </div>
 
-                        <div class="form_group">
-                          <label for="last_name">Last name:</label>
-                          <input
-                            type="text"
-                            id="last_name"
-                            name="last_name"
-                            required
-                          />
-                        </div>
-                      </div>
-
-                      <div class="form_single">
-                        <label for="id_number">ID no:</label>
+                  <form id="registration_data" action="/submit" method="POST">
+                    <div class="form_group_container">
+                      <div class="form_group">
+                        <label for="first_name">First name:</label>
                         <input
                           type="text"
-                          id="id_number"
-                          name="id_number"
+                          id="first_name"
+                          name="first_name"
                           required
                         />
                       </div>
 
-                      <div class="form_single">
-                        <label for="program">Program:</label>
-                        <select name="program" id="program" required>
+                      <div class="form_group">
+                        <label for="last_name">Last name:</label>
+                        <input
+                          type="text"
+                          id="last_name"
+                          name="last_name"
+                          required
+                        />
+                      </div>
+                    </div>
+
+                    <div class="form_single">
+                      <label for="id_number">ID no:</label>
+                      <input
+                        type="text"
+                        id="id_number"
+                        name="id_number"
+                        required
+                      />
+                    </div>
+
+                    <div class="form_single">
+                      <label for="program">Program:</label>
+                      <select name="program" id="program" required>
+                        <option value="" disabled selected></option>
+                        <option value="subject1">SUB1: Subject 1</option>
+                        <option value="subject2">SUB2: Subject 2</option>
+                        <option value="subject3">SUB3: Subject 3</option>
+                      </select>
+                    </div>
+
+                    <div class="form_group_container">
+                      <div class="form_group">
+                        <label for="year_level">Year Level:</label>
+                        <select name="year_level" id="year_level" required>
                           <option value="" disabled selected></option>
-                          <option value="subject1">SUB1: Subject 1</option>
-                          <option value="subject2">SUB2: Subject 2</option>
-                          <option value="subject3">SUB3: Subject 3</option>
+                          <option value="year_one">1st year</option>
+                          <option value="year_two">2nd year</option>
+                          <option value="irregular">Irregular</option>
                         </select>
                       </div>
 
-                      <div class="form_group_container">
-                        <div class="form_group">
-                          <label for="year_level">Year Level:</label>
-                          <select name="year_level" id="year_level" required>
-                            <option value="" disabled selected></option>
-                            <option value="year_one">1st year</option>
-                            <option value="year_two">2nd year</option>
-                            <option value="irregular">Irregular</option>
-                          </select>
-                        </div>
-
-                        <div class="form_group">
-                          <label for="section">Section:</label>
-                          <select name="section" id="section" required>
-                            <option value="" disabled selected></option>
-                            <option value="section1">Section 1</option>
-                            <option value="section2">Section 2</option>
-                            <option value="section3">Section 3</option>
-                          </select>
-                        </div>
+                      <div class="form_group">
+                        <label for="section">Section:</label>
+                        <select name="section" id="section" required>
+                          <option value="" disabled selected></option>
+                          <option value="section1">Section 1</option>
+                          <option value="section2">Section 2</option>
+                          <option value="section3">Section 3</option>
+                        </select>
                       </div>
+                    </div>
 
-                      <div class="form_single">
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" required />
-                      </div>
+                    <div class="form_single">
+                      <label for="email">Email:</label>
+                      <input type="email" id="email" name="email" required />
+                    </div>
 
-                      <div class="form_single">
-                        <label for="password">Password:</label>
-                        <input
-                          type="password"
-                          id="password"
-                          name="password"
-                          required
-                        />
-                      </div>
-                    </form>
-                  </div>
+                    <div class="form_single">
+                      <label for="password">Password:</label>
+                      <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        required
+                      />
+                    </div>
+                  </form>
 
                   <div class="submission_cta">
                     <button type="submit" form="registration_data">
@@ -155,12 +159,68 @@
                   </div>
                 </div>
                 <div class="side_header">
-                  <h3>Welcome!<br />Nice to meet you.</h3>
+                  <div class="side_header_description">
+                    <h3>Welcome!<br />Nice to meet you.</h3>
 
-                  <p>
-                    Create your account to get started with our attendance
-                    monitoring system.
-                  </p>
+                    <p>
+                      Create your account to get started with our attendance
+                      monitoring system.
+                    </p>
+                  </div>
+
+                  <p id="no_account">Don't have an account?</p>
+
+                  <div class="registration_form_cta">
+                    <button id="form_login_cta">Log In</button>
+                  </div>
+                </div>
+              </dialog>
+
+              <!--* Log In Form -->
+
+              <dialog id="login_form">
+                <div class="form_container">
+                  <p>Log In Form</p>
+
+                  <form id="login_data" action="/login" method="POST">
+                    <div class="form_single">
+                      <label for="login_id_number">ID no:</label>
+                      <input
+                        type="text"
+                        id="login_id_number"
+                        name="id_number"
+                        required
+                      />
+                    </div>
+
+                    <div class="form_single">
+                      <label for="login_password">Password:</label>
+                      <input
+                        type="password"
+                        id="login_password"
+                        name="password"
+                        required
+                      />
+                    </div>
+                  </form>
+
+                  <div class="submit_login_cta">
+                    <button type="submit" form="login_data">Log In</button>
+                  </div>
+                </div>
+
+                <div class="side_header">
+                  <div class="side_header_description">
+                    <h3>Welcome back!<br />Let's get started.</h3>
+
+                    <p>Login your account to start managing attendances.</p>
+                  </div>
+
+                  <p id="no_account">Don't have an account?</p>
+
+                  <div class="login_form_cta">
+                    <button id="form_register_cta">Register</button>
+                  </div>
                 </div>
               </dialog>
             </div>
@@ -288,7 +348,7 @@
     <footer>
       <section class="credits_description">
         <p>
-          A simple attendance monitoring system for students and teachers,
+          A simple attendance management system for students and teachers,
           developed as a school project. Thanks to everyone who helped make this
           project possible:
         </p>

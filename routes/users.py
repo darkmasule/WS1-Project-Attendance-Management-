@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template, request
+from flask import Blueprint, render_template, request, session, redirect, url_for
 from database.db import collection
 from werkzeug.security import generate_password_hash, check_password_hash
 
@@ -35,6 +35,38 @@ def submit():
 
     return """ <h1>Submitted Successfully!</h1>
     <a href="/">Back to Form</a> """
+
+
+@users.route("/login", methods=["POST"])
+def login():
+    id_number = request.form.get("id_number")
+    password = request.form.get("password")
+
+    user = collection.find_one({"id_number": id_number})
+
+    if user and check_password_hash(user["password"], password):
+        session["user_id"] = str(user["_id"])
+        session["id_number"] = user["id_number"]
+
+        return redirect(url_for("users.dashboard"))
+
+    return "Invalid ID number or password"
+
+
+@users.route("/dashboard_base")
+def dashboard():
+    if "user_id" not in session:
+        return redirect(url_for("users.home"))
+
+    from bson import ObjectId
+
+    user = collection.find_one({"_id": ObjectId(session["user_id"])})
+
+    if not user:
+        session.clear()
+        return redirect(url_for("users.home"))
+
+    return render_template("dashboard_base.html", first_name=user["first_name"])
 
 
 @users.route("/student/profile")
