@@ -13,7 +13,7 @@
 <p>Clone repository:</p>
 <p>Run this command:</p>
 <ul>
-  <li>git clone https://github.com/darkmasule/WS1-Project-Attendance-Management-.git</li>
+  <li>git clone https://github.com/darkmasule/WS1_Finals_Project.git</li>
 </ul>
 <br />
 
