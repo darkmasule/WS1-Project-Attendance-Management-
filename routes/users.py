@@ -53,7 +53,7 @@ def login():
     return "Invalid ID number or password"
 
 
-@users.route("/dashboard_base")
+@users.route("/dashboard")
 def dashboard():
     if "user_id" not in session:
         return redirect(url_for("users.home"))
@@ -66,7 +66,15 @@ def dashboard():
         session.clear()
         return redirect(url_for("users.home"))
 
-    return render_template("dashboard_base.html", first_name=user["first_name"])
+    return render_template("overview_block.html", first_name=user["first_name"])
+
+
+@users.route("/attendance")
+def attendance():
+    if "user_id" not in session:
+        return redirect(url_for("users.home"))
+
+    return render_template("attendance_block.html")
 
 
 @users.route("/student/profile")

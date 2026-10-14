@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="../static/styles/global.css" />
     <link rel="stylesheet" href="../static/styles/dashboard_base.css" />
 
+    {% block styles %} {% endblock %}
+
     <title>Dashboard</title>
   </head>
   <body>
@@ -31,7 +33,7 @@
         </div>
 
         <div class="middle_ctas">
-          <a href="#">
+          <a href="/dashboard">
             <img
               src="../static/assets/icons/overview_icon.svg"
               alt="overview_icon"
@@ -39,7 +41,7 @@
             <p>Overview</p>
           </a>
 
-          <a href="#">
+          <a href="/attendance">
             <img
               src="../static/assets/icons/attendance_icon.svg"
               alt="attendance_icon"
@@ -72,21 +74,21 @@
         </div>
       </nav>
 
-      <header>
-        <h1>{% block header_title %}Overview{% endblock %}</h1>
-        <div class="side_cta_container">
-          <a href="/">Welcome, {{ first_name }}</a>
-          <div class="profile_container">
-            <img
-              src="../static/assets/images/caca.png"
-              alt="profile_icon.png"
-            />
-          </div>
-        </div>
-      </header>
-
       <div class="main_content">
-        {% block content %}{% endblock %}
+        <header>
+          <h1>Overview</h1>
+          <div class="side_cta_container">
+            <a href="/">Welcome, {{ first_name }}</a>
+            <div class="profile_container">
+              <img
+                src="../static/assets/images/caca.png"
+                alt="profile_icon.png"
+              />
+            </div>
+          </div>
+        </header>
+
+        <main>{% block content %} {% endblock %}</main>
       </div>
 
     <script src="../static/scripts/dashboard_base.js"></script>
