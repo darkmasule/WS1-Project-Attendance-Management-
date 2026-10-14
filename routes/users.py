@@ -48,17 +48,25 @@ def login():
         session["user_id"] = str(user["_id"])
         session["id_number"] = user["id_number"]
 
-        return redirect(url_for("users.test"))
+        return redirect(url_for("users.dashboard"))
 
     return "Invalid ID number or password"
 
 
-@users.route("/testing")
-def test():
+@users.route("/dashboard_base")
+def dashboard():
     if "user_id" not in session:
         return redirect(url_for("users.home"))
 
-    return render_template("index_test.html")
+    from bson import ObjectId
+
+    user = collection.find_one({"_id": ObjectId(session["user_id"])})
+
+    if not user:
+        session.clear()
+        return redirect(url_for("users.home"))
+
+    return render_template("dashboard_base.html", first_name=user["first_name"])
 
 
 @users.route("/student/profile")
