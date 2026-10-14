@@ -1,32 +1,43 @@
-{% extends "base.html" %}
+{% extends "dashboard_base.html" %}
 
-{% block header_title }
 {% block header_title %}Account Profile{% endblock %}
 
-{% block content%}
+{% block content %}
 <div class="profilewrapper">
     <div class="profilecard">
         <h3>Student Information</h3>
          <div class="userinfobox">
-            <img src-="{{ url_for('ststic', filename='asset/icons/bin/profile_icon.png') }}" alt="profile icon" class="profileicon">
-            <link rel="stylesheet" href="{{ url_for('static', filename='styles/profile.css') }}">
+            {% if student is defined and student and student.profile_img_url %}
+            <img src="{{ student.profile_img_url }}" alt="profile icon" class="profileicon">
+            {% else %}
+            <img scr="../static/assets/images/caca.png" alt="profile icon" class="profileicon">
+            {% endif %}
             <div>
-                <h2>Juana Dela Cruz</h2>
-                <p>BS Computer Science</p>
-                <p class="idtext">ID no. CA202612345</p>
+                {% if student is defined and student and student.name %}
+                    <h2>{{ student.name }}</h2>
+                    <p>{{ student.course }}</p>
+                    <p class="idtext">ID no. {{ student.student_id }}</p>
+                {% else %}
+                    <h2>Jessie Aldana</h2>
+                    <p>BS Computer Science</p>
+                    <p class = "idtext">ID no. CA202612345</p>
+                {% endif %}
             </div>
         </div>
 
         <div class="infodetails">
-            </div>
                 <h4>Email</h4>
-                <p>juana.dela.cruz@student.university.edu</p>
-            </div>
+                {% if student is defined and student and student.email %}
+                    <p>{{ student.email }}</p>
+                {% else %}
+                    <p>jessie.aldana@student.icct.edu</p>
+                {% endif %} 
         </div>
 
-        <div class+"profileactions">
+        <div class="profileactions">
             <button class="editbtn">Edit Profile</button>
-        </div>"
+            <button id="openEditModalBtn" class="editbtn">Edit Profile</button>
+        </div>
     </div>
 
  <div class="hardwarecard">
@@ -53,36 +64,41 @@
             <button id = "closeEditModalBtn" class = "close-btn">&times;</button>
         </div>
 
-        <form id = "editProfileForm" class = "modal-body">
+        <form id = "editProfileForm" class = "modal-body" method="POST" action="#">
             <div class = "form-group">
                 <label for = "studentName">Full Name</label>
-                <input type = "text" id = "studentName" value = "Juana Dela Cruz" required />
+                <input type = "text" id = "studentName" name="name" value = "{% if  student is defined and student and student.name %}{{ student.name }}{% endif %}" required />
             </div>
             <div class = "form-group">
                 <label for = "studentEmail">Email Address</label>
-                <input type = "email" id = "studentEmail" value = "juana.dela.cruz@student.university.edu" required />
+                <input type = "email" id = "studentEmail" name="email" value = "{% if  student is defined and student.email %}{{ student.email}}{% endif %}" required />
             </div>
             <div class = "form-group">
                 <label for = "profileImgUrl">Profile Picture URL</label>
-                <input type = "url" id = "profileImgUrl" placeholder = "https://example.com/photo.jpg" />
+                <input type = "url" id = "profileImgUrl" name="profile_img_url" value="{% if student is defined and student and student.profile_img_url %}{{ student.profile_img_url }}{% endif %}" placeholder = "https://example.com/photo.jpg" />
+            </div>
+            <div class="form-actions">
+                <button type="submit" class="save-btn">Save Changes</button>
+                <button type="button" id="cancelBtn" class="cancel-btn">Cancel</button>
             </div>
         </form>
     </div>
 </div>
+
 <script>
-    const modal = document.getElementById("editProfileModal");
-    const openBtn = document.getElementById("openEditModalBtn");
-    const closeBtn = document.getElementById("closeEditModalBtn");  
-    const cancelBtn = document.getElementById("cancelBtn");
-    const openModal = () => modal.classList.remove("hidden");
-    const closeModal = () => modal.classList.add("hidden");
+     const modal = document.getElementById("editProfileModal");
+     const openBtn = document.getElementById("openEditModalBtn");
+     const closeBtn = document.getElementById("closeEditModalBtn");  
+     const cancelBtn = document.getElementById("cancelBtn");
+     const openModal = () => modal.classList.remove("hidden");
+     const closeModal = () => modal.classList.add("hidden");
 
-    if (openBtn) openBtn.addEventListener("click", openModal);
-    if (closeBtn) closeBtn.addEventListener("click", closeModal);
-    if (cancelBtn) cancelBtn.addEventListener("click", closeModal); 
+     if (openBtn) openBtn.addEventListener("click", openModal);
+     if (closeBtn) closeBtn.addEventListener("click", closeModal);
+     if (cancelBtn) cancelBtn.addEventListener("click", closeModal); 
 
-    window.addEventListener("click", (e) => {
-        if (e.target === modal) closeModal();
-    });
+     window.addEventListener("click", (e) => {
+            if (e.target === modal) closeModal();
+     });
 </script>
 {% endblock %}
