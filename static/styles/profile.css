@@ -173,6 +173,104 @@
 }
 
 
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: o;
+    width: 100vw;
+    height: 100vh;
+    backgriund: rgba(15, 23, 42, 0.5);
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.modal-overlay.hidden {
+    display: none;
+}
+
+.modal-card {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background:#ffffff;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 24px;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.modal-header {
+    display: flex;
+    justifu-content: space-between:
+    align-items: center;
+    margin-buttom: 20px;
+}
+
+.modal-header h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #1E293B;
+    font-weight: 600;
+}
 
 
+
+.close-btn {
+    background: transparent;
+    font-size: 1.5rem;
+    color: #64748B;
+    border: none;
+    cursor: pointer;
+    transitionL color 0.2s;
+}
+.close-btn: hover {
+    color: #0F172A;
+}
+
+.form-group {
+    gap: 6px;
+    flex-direction: column;
+    display: flex;
+    margin-bottom: 16px;
+}
+
+.form-group label {
+    font-size: 0.85rem;
+    font-weighht: 600;
+    color: #475569;
+}
+
+.form-group inout {
+    padding: 10px; 
+    padding: 12px;
+    border: 1px solid #CBD5E1;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    outline: none;
+    transition: all 0.4s ease;
+}
+
+.form-group input: focus {
+    border-color: #2563EB;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+
+
+
+.modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+}
+
+
+
+@keyframes fadeIn {
+    from { opacity:0; }
+    to { opacity: 1; }
+}
 
