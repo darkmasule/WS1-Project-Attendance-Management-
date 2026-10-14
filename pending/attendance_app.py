@@ -1,5 +1,5 @@
-from flask import Flask, request, jsonify
-
+    from flask import Flask, request, jsonify
+from flask_cors import CORS
 from collections import deque
 
 from pymongo import MongoClient
