@@ -38,4 +38,11 @@ while attendance_queue:
     student = attendance_queue.popleft()
 
 try:
+    attendance_records.insert_one(student)
+
+            return jsonify({
+                "success": True,
+                "message": f"Attendance recorded: {student['name']}!",
+                "student_id": student["student_id"]
+            }), 201
     #di pa tapos need pa ng return except return blocks
