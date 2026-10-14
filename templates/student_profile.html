@@ -45,4 +45,44 @@
     </div>    
  </div>
 </div>   
+
+<div id = "editProfileModal" class="modal-overlay hidden">
+    <div class = "modal-card">
+        <div class = "modal-header">
+            <h3>Edit Student Profile</h3>
+            <button id = "closeEditModalBtn" class = "close-btn">&times;</button>
+        </div>
+
+        <form id = "editProfileForm" class = "modal-body">
+            <div class = "form-group">
+                <label for = "studentName">Full Name</label>
+                <input type = "text" id = "studentName" value = "Juana Dela Cruz" required />
+            </div>
+            <div class = "form-group">
+                <label for = "studentEmail">Email Address</label>
+                <input type = "email" id = "studentEmail" value = "juana.dela.cruz@student.university.edu" required />
+            </div>
+            <div class = "form-group">
+                <label for = "profileImgUrl">Profile Picture URL</label>
+                <input type = "url" id = "profileImgUrl" placeholder = "https://example.com/photo.jpg" />
+            </div>
+        </form>
+    </div>
+</div>
+<script>
+    const modal = document.getElementById("editProfileModal");
+    const openBtn = document.getElementById("openEditModalBtn");
+    const closeBtn = document.getElementById("closeEditModalBtn");  
+    const cancelBtn = document.getElementById("cancelBtn");
+    const openModal = () => modal.classList.remove("hidden");
+    const closeModal = () => modal.classList.add("hidden");
+
+    if (openBtn) openBtn.addEventListener("click", openModal);
+    if (closeBtn) closeBtn.addEventListener("click", closeModal);
+    if (cancelBtn) cancelBtn.addEventListener("click", closeModal); 
+
+    window.addEventListener("click", (e) => {
+        if (e.target === modal) closeModal();
+    });
+</script>
 {% endblock %}
