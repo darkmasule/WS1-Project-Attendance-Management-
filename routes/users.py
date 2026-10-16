@@ -80,3 +80,8 @@ def attendance():
 @users.route("/student/profile")
 def student_profile():
     return render_template("student_profile.html")
+
+
+@users.route("/settings")
+def settings():
+    return render_template("settings.html")
